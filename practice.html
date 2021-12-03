@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .header{
+            background-color: chartreuse;
+            text-align: center;
+            font-size: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        .footer{
+            background-color: chartreuse;
+            text-align: center;
+            font-size: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        #a{
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+        button{
+            width: 50px;
+            height: 40px;
+        }
+        input{
+            width:210px;
+            height:25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>Calculator</h3>
+    </div>
+    <div id="a">
+        <input placeholder id="z"><br>
+        <nav>
+            <button id="aa" onclick="seven()">7</button>
+            <button id="bb" onclick="eight()">8</button>
+            <button id="cc" onclick="nine()">9</button>
+            <button id="dd" onclick="div()">/</button>
+        </nav>
+        <nav></nav>
+            <button id="ee" onclick="four()">4</button>
+            <button id="ff" onclick="five()">5</button>
+            <button id="gg" onclick="six()">6</button>
+            <button id="hh" onclick="mul()">*</button>
+        </nav>
+        <nav>
+            <button id="ii" onclick="one()">1</button>
+            <button id="jj" onclick="two()">2</button>
+            <button id="kk" onclick="three()">3</button>
+            <button id="ll" onclick="sub()">-</button>
+        </nav>
+        <nav>
+            <button onclick="clear()">C</button>
+            <button onclick="zero()">0</button>
+            <button id="zz" onclick="equal()">=</button>
+            <button onclick="add()">+</button>
+        </nav>
+    </div>
+    <div class="footer">
+        <p>Thank you for using my Calculator</p>
+    </div>
+    <script>
+        function zero(){
+            var x=0;
+            document.getElementById("z").value=x;
+
+        }
+        function one(){
+            var x=1;
+            document.getElementById("z").value=x;
+
+        }
+        function two(){
+            var x=2;
+            document.getElementById("z").value=x;
+
+        }
+        function three(){
+            var x=3;
+            document.getElementById("z").value=x;
+
+        }
+        function four(){
+            var x=4;
+            document.getElementById("z").value=x;
+
+        }
+        function five(){
+            var x=5;
+            document.getElementById("z").value=x;
+
+        }
+        function six(){
+            var x=6;
+            document.getElementById("z").value=x;
+
+        }
+        function seven(){
+            var x=7;
+            document.getElementById("z").value=x;
+
+        }
+        function eight(){
+            var x=8;
+            document.getElementById("z").value=x;
+
+        }
+        function nine(){
+            var x=9;
+            document.getElementById("z").value=x;
+
+        }
+        function clear(){
+            var o=0;
+            document.getElementById("z").value=o;
+
+        }
+        function sub(){
+            var n1=document.getElementById("z").value;
+            var n2=document.getElementById("z").value;
+            var n3=n1-n2;
+            document.getElementById("zz").value=n3;
+        }
+        function add(){
+            var n1=document.getElementById("z").value;
+            var n2=document.getElementById("z").value;
+            var n3=n1+n2;
+            document.getElementById("zz").value=n3;
+        }
+        function mul(){
+            var n1=document.getElementById("z").value;
+            var n2=document.getElementById("z").value;
+            var n3=n1*n2;
+            document.getElementById("zz").value=n3;
+        }
+        function div(){
+            var n1=document.getElementById("z").value;
+            var n2=document.getElementById("z").value;
+            var n3=n1/n2;
+            document.getElementById("zz").value=n3;
+        }
+        function equal(){
+            var res=document.getElementById("zz").value;
+            document.getElementById("z").value=res;
+        }
+    </script>
+</body>
+</html>

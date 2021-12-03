@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        #main{
+            text-align: center;
+            padding-bottom: 20px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: chartreuse;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        body{
+            background-image: url("light.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin-top: 75px;
+            /* margin-right: 400px;
+            margin-left: 400px; */
+            }
+        #color{
+            text-align: center;
+        }
+        button{
+            width: 80px;
+            height: 320px;
+            margin: -2px;
+            box-shadow: 8px 8px 8px black;
+        }
+        #f{ 
+            width: auto;
+            height: auto;
+            box-shadow: 0px 0px;
+            font-size: 25px;
+        }
+        #a{
+            width: 50px;
+            height: 200px;
+            background-color: lightslategray;
+            box-shadow: 4px 4px 4px black;
+            color: chartreuse;
+            font-size: 25px;
+            position: absolute;
+            margin-left: -25px;
+            margin-right: -25px;
+            z-index: 2;
+        }
+        #b{
+            width: 50px;
+            height: 200px;
+            background-color: lightslategray;
+            position: absolute;
+            box-shadow: 4px 4px 4px black;
+            color: chartreuse;
+            font-size: 25px;
+            margin-left: -25px;
+            margin-right: -25px;
+            z-index: 2;
+        }
+        #c{
+            width: 50px;
+            height: 200px;
+            background-color: lightslategray;
+            box-shadow: 4px 4px 4px black;
+            color: chartreuse;
+            font-size: 25px;
+            position: absolute;
+            margin-left: -25px;
+            margin-right: -25px;
+            z-index: 2;
+        }
+        #d{
+            width: 50px;
+            height: 200px;
+            background-color: lightslategray;
+            box-shadow: 4px 4px 4px black;
+            color: chartreuse;
+            font-size: 25px;
+            position: absolute;
+            margin-left: -25px;
+            margin-right: -25px;
+            z-index: 2;
+        }
+        #e{
+            width: 50px;
+            height: 200px;
+            background-color: lightslategray;
+            box-shadow: 4px 4px 4px black;
+            color: chartreuse;
+            font-size: 25px;
+            position: absolute;
+            margin-left: -25px;
+            margin-right: -25px;
+            z-index: 2;
+        }
+        p{
+            position: relative;
+            top: 100px;
+            font-size: 25px;
+        }
+        #one{
+            word-spacing: 30px;
+            height: 150px;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 20px;
+        }
+        #two{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">My Virtual Piano</h1>
+    <div id="main">
+        <div id="one"><br>
+        <i class="fas fa-sliders-h fa-3x"></i>
+        <i class="fas fa-play fa-3x"></i><br><br>
+        <i class="fas fa-volume-off fa-3x"></i>
+        <i class="fas fa-volume-mute fa-3x"></i>
+        <i class="fas fa-volume-up fa-3x"></i>
+        <i class="fas fa-volume-down fa-3x"></i>
+        </div><br>
+        <button onclick="play1()"><p>C</p></button>
+        <audio  id="g" src="a.mp3"></audio>
+        <button id="a" onclick="play8()">C#</button>
+        <audio  id="n" src="b.mp3"></audio>
+        <button onclick="play2()"><p>D</p></button>
+        <audio  id="h" src="c.mp3"></audio>
+        <button id="b" onclick="play9()">D#</button>
+        <audio  id="o" src="d.mp3"></audio>
+        <button id="z" onclick="play3()"><p>E</p></button>
+        <audio  id="i" src="e.mp3"></audio>
+        <button id="y" onclick="play4()"><p>F</p></button>
+        <audio  id="j" src="f.mp3"></audio>
+        <button id="c" onclick="play10()">F#</button>
+        <audio  id="p" src="g.mp3"></audio>
+        <button onclick="play5()"><p>G</p></button>
+        <audio  id="k" src="h.mp3"></audio>
+        <button id="d" onclick="play11()">G#</button>
+        <audio  id="q" src="i.mp3"></audio>
+        <button onclick="play6()"><p>A</p></button>
+        <audio  id="l" src="j.mp3"></audio>
+        <button id ="e" onclick="play12()">A#</button>
+        <audio  id="r" src="k.mp3"></audio>
+        <button onclick="play7()"><p>B</p></button>
+        <audio  id="m" src="l.mp3"></audio>
+        <button onclick="play1()"><p>C</p></button>
+        <audio  id="g" src="a.mp3"></audio>
+        <button id="a" onclick="play8()">C#</button>
+        <audio  id="n" src="b.mp3"></audio>
+        <button onclick="play2()"><p>D</p></button>
+        <audio  id="h" src="c.mp3"></audio>
+        <button id="b" onclick="play9()">D#</button>
+        <audio  id="o" src="d.mp3"></audio>
+        <button id="z" onclick="play3()"><p>E</p></button>
+        <audio  id="i" src="e.mp3"></audio>
+        <button id="y" onclick="play4()"><p>F</p></button>
+        <audio  id="j" src="f.mp3"></audio>
+        <button id="c" onclick="play10()">F#</button>
+        <audio  id="p" src="g.mp3"></audio>
+        <button onclick="play5()"><p>G</p></button>
+        <audio  id="k" src="h.mp3"></audio>
+        <button id="d" onclick="play11()">G#</button>
+        <audio  id="q" src="i.mp3"></audio>
+        <button onclick="play6()"><p>A</p></button>
+        <audio  id="l" src="j.mp3"></audio>
+        <button id ="e" onclick="play12()">A#</button>
+        <audio  id="r" src="k.mp3"></audio>
+        <button onclick="play7()"><p>B</p></button>
+        <audio  id="m" src="l.mp3"></audio>
+    </div>
+        <div id="color">
+            <h3>To change the Color of Piano</h3>
+            <button id="f" onclick="Change()">Click Me!</button>
+        </div>
+    <script>
+        function Change(){
+            var r=Math.floor(Math.random() * 256);
+            var g=Math.floor(Math.random() * 256);
+            var b=Math.floor(Math.random() * 256);
+            var mycolor="rgb("+r+","+g+","+b+")";
+            document.getElementById("main").style.background=mycolor;
+        }
+        function play1(){
+            document.getElementById("g").play();
+        }
+        function play2(){
+            document.getElementById("h").play();
+        }
+        function play3(){
+            document.getElementById("i").play();
+        }
+        function play4(){
+            document.getElementById("j").play();
+        }
+        function play5(){
+            document.getElementById("k").play();
+        }
+        function play6(){
+            document.getElementById("l").play();
+        }
+        function play7(){
+            document.getElementById("m").play();
+        }
+        function play8(){
+            document.getElementById("n").play();
+        }
+        function play9(){
+            document.getElementById("o").play();
+        }
+        function play10(){
+            document.getElementById("p").play();
+        }
+        function play11(){
+            document.getElementById("q").play();
+        }
+        function play12(){
+            document.getElementById("r").play();
+        }
+    </script>
+</body>
+</html>

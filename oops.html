@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Oops</h1>
+    </div>
+    <script>
+        // Object
+        var person={
+            firstName:"Pendyala",
+            lastName:"Raghava",
+            // Method
+            getName:function name(){
+                return (person.firstName+" "+person.lastName);
+            }
+        }
+        console.log(person.firstName);
+        console.log(person.lastName);
+        console.log(person.getName());
+        // Another type of methods and objects creation
+        function getName(firstName,lastName){
+            this.name=firstName;
+            this.lname=lastName;
+        }
+        person1=new getName("Pendyala","Raghav");
+        console.log(person1.name+" "+person1.lname);
+
+        // Classes
+        class Vehicle{
+            // Constructor mandatory otherwise for this type we have an undefined as output
+            constructor(name,price,model){
+                this.name=name;
+                this.price=price;
+                this.model=model;
+            }
+            details(){
+                return (this.name+" "+this.price+" "+this.model);
+            }
+        }
+        let a=new Vehicle("Hundai","20l","X");
+        let b=new Vehicle("Maruthi","15l","M");
+        console.log(a.name);
+        console.log(b.price);
+        console.log(a.details());
+        console.log(b.details());
+        // another type of classes
+        function Fruits(name,color,cost){
+            this.name=name;
+            this.cost=cost;
+            this.color=color;
+        }
+        Fruits.prototype.Details= function(){
+            return (this.name+" "+this.color+" "+this.cost);
+        }
+        let p= new Fruits("Apple","Red","20");
+        let q= new Fruits("Mango","yellow","15");
+        console.log(p.name);
+        console.log(q.cost);
+        console.log(p.Details());
+
+        // Encapsulation
+        function student(id,grade){
+            this.id=id;
+            this.grade=grade;
+        }
+        student.prototype.get= function getid(){
+            return this.id;
+        }
+        student.prototype.get1= function getgrade(){
+            return this.grade;
+        }
+        let z= new student("Raghava","95");
+        console.log(z.id);
+        console.log(z.grade);
+        console.log(z.get1());
+        console.log(z.get());
+
+        //Encapsulation again
+        class Student{
+            constructor(name,grade){
+                this.name=name;
+                this.grade=grade;
+            }
+            add_gen(gender){
+                this.gender=gender;
+            }
+            getDetails(){
+                return (this.name+" "+this.grade+" "+this.gender);
+            }
+        }
+        let w=new Student("Raghav","A+");
+        w.add_gen("M");
+        console.log(w.name);
+        console.log(w.grade);
+        console.log(w.gender);
+        console.log(w.getDetails());
+
+        //Inheritance
+        class animal{
+            constructor(name,gen){
+                this.name=name;
+                this.gen=gen;
+            }
+        }
+        class anim extends animal{
+            constructor(name,gen,baby,color){
+                super(name,gen);
+                this.baby=baby;
+                this.color=color;
+            }
+        }
+        let m= new anim("Tiger","Male","St","Red");
+        let k=new animal("Tiger","Male");
+        console.log(m.name);
+        console.log(m.gen);
+        console.log(m.baby);
+        console.log(m.color);
+        alert(m instanceof animal);
+        alert(k instanceof animal);
+        alert(m instanceof anim);
+    </script>
+</body>
+</html>

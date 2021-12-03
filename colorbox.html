@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorBox</title>
+    <style>
+        #a{
+            position: fixed;
+            left: 600px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #b{
+            position: fixed;
+            left: 750px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #c{
+            position: fixed;
+            left: 900px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: turquoise;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #d{
+            position: fixed;
+            left: 600px;
+            top: 250px;
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #e{
+            position: fixed;
+            left: 750px;
+            top: 250px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #f{
+            position: fixed;
+            left: 900px;
+            top: 250px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #g{
+            position: fixed;
+            left: 600px;
+            top: 400px;
+            width: 100px;
+            height: 100px;
+            background-color:blue;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #h{
+            position: fixed;
+            left: 750px;
+            top: 400px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        #i{
+            position: fixed;
+            left: 900px;
+            top: 400px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 10px;
+            box-shadow: 5px 5px black;
+        }
+        button{
+            position: fixed;
+            left: 750px;
+            top: 550px;
+            width: 75px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="a">
+        <button onclick="print()">Click me!</button>
+    </div>
+    <div id="b"></div>
+    <script>
+        function print(){
+            var name = prompt("Enter your Name");
+            document.getElementById("b").innerHTML="Welcome Mr."+name;
+        }
+    </script> -->
+
+
+
+    <h1 align="center">My Color Boxes</h1>
+    <div id="main">
+        <div id="a"></div>
+        <div id="b"></div>
+        <div id="c"></div>
+        <div id="d"></div>
+        <div id="e"></div>
+        <div id="f"></div>
+        <div id="g"></div>
+        <div id="h"></div>
+        <div id="i"></div>
+    </div>
+      <button onclick="change()">Click me!</button>
+</body>
+<script>
+    function change(){
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("a").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("b").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("c").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("d").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("e").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("f").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("g").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("h").style.background=mycolor;
+         var r=Math.floor(Math.random() * 256);
+         var g=Math.floor(Math.random() * 256);
+         var b=Math.floor(Math.random() * 256);
+         var mycolor="rgb("+r+","+g+","+b+")";
+         document.getElementById("i").style.background=mycolor;
+    }
+</script>
+</html>

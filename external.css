@@ -1,0 +1,33 @@
+/* tag name */
+h1{
+    color:blue;
+}
+/* Id name */
+#a1{
+    background-color: yellowgreen;
+}
+/* Class name */
+.Myid{
+    background-color: tomato;
+}
+h5.a2{
+    background-color:violet;
+}
+/* Universal  for all headings and paragraphs*/
+*{
+    font-size: larger;
+}
+/* Grouped  */
+h1,p,h5{
+    color: rgb(102, 255, 0);
+    padding: 10px;
+    margin: 50px;
+    border-radius: 15px;
+    background-image:linear-gradient(rgb(255, 238, 0));
+}
+div{
+    font-style: italic;
+}
+div{
+    background-color: teal;
+}

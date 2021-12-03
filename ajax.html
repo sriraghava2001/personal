@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <!-- Asynchronous Javascript And XML -->
+</head>
+<body>
+    <div align="center">
+        <h1>My Ajax</h1>
+        <button onclick="load()">Click to change</button>
+    </div>
+    <br>
+    <br>
+    <div id="res" align="center"></div>
+    <script>
+        function load(){
+            var a= new XMLHttpRequest();
+            a.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById("res").innerHTML=this.responseText;
+                }
+            };
+            a.open("GET","mytext.txt",true);
+            a.send();
+        }
+    </script>
+</body>
+</html>

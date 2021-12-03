@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            animation:Example 10s infinite ;
+            position: relative;
+        }
+        .a{animation-timing-function: ease;}
+        .b{animation-timing-function: linear;}
+        .c{animation-timing-function: ease-in;}
+        .d{animation-timing-function: ease-out;}
+        .e{animation-timing-function: ease-in-out;}
+        @keyframes Example{
+            from{left: 0px;}
+            to{left:500px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="a">ease</div>
+    <div class="b">linear</div>
+    <div class="c">ease-in</div>
+    <div class="d">ease-out</div>
+    <div class="e">ease-in-out</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: cyan;
+        }
+        #header{
+            background-color: chartreuse;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 0px;
+        }
+        #main{
+            border: 1px solid black;
+            border-radius: 20px;
+            padding-bottom: 10px;
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-top: 30px;
+            background-image:  linear-gradient(#ee6c16,#dad733, #49c025);
+        }
+        #one1{
+            width: 400px;
+            border-radius: 20px;
+            font-size: 25px;
+        }
+        #five5{
+            border-radius: 10px;
+            border: 1px solid orangered;
+            width: 100px;
+            background-color: white;
+            font-size: 20px;
+        }
+        button{
+            border-radius: 10px;
+            border: 1px solid orangered;
+            width: 100px;
+            font-size: 20px;
+            background-color: white;
+        }
+        #A:hover{
+             background-color:rgb(5,136,81);
+         }
+         #B:hover{
+             background-color:rgb(255,191,0);
+         }
+         #C:hover{
+             background-color:rgb(218, 62, 75);
+         }
+         #five5:hover{
+             background-color: green;
+         }
+        #six6{
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 55px;
+            padding-top: 20px;
+            margin-left: 300px;
+            margin-right: 300px;
+            background-color: cornsilk;
+        }
+         #seven7{
+            font-size: 30px;
+            color:white ;
+         }
+         #eight8{
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin-top: 55px;
+            margin-left: 300px;
+            margin-right: 300px;
+            background-color:  rgb(243, 22, 195);
+         }
+         b{
+             font-size: 25px;
+         }
+         #footer{
+             font-size: 20px;
+             padding: 5px;
+             margin-top: 20px;
+             background-color: chartreuse;
+         }
+         label{
+             font-size: 25px;
+             margin: 10px;
+             color: blue;
+         }
+    </style>
+</head>
+<body>
+    <div align="center" id="header">
+    <h2 align="center">My To Do List Based On Priorities</h2></div>
+    <div id="main" align="center"><br>
+        <h3>Create Your To Do List Here</h3>
+        <br>
+        <input type="text" placeholder="Enter a Task here" id="one1"><br><br>
+        <b>Priority:</b>
+        <label for="two2">
+        <input id="two2" type="radio" style="height:20px; width:20px;" name="level" value="Low" onclick="low()"> Low</label>
+        <label for="three3">
+        <input id="three3" type="radio" style="height:20px; width:20px;" name="level" value="Medium" onclick="medium()" > Medium</label>
+        <label for="four4">
+        <input id="four4" type="radio" style="height:20px; width:20px;" name="level" value="High" onclick="high()" > High</label><br><br>
+        <input id="five5" type="button" value="Save" onclick="save()">
+    </div>
+    <div id="six6" align="center">
+        <h3>Display Your To Do List Here</h3><br>
+        <div id="seven7"></div>
+    </div>
+    <div id="eight8" align="center">
+        <h3>Filter Your List Here Based On Priority</h3><br>
+        <button id="A" style="margin:20px;" onclick="showl()">Low</button>
+        <button id="B" style="margin:20px;" onclick="showm()">Medium</button>
+        <button id="C" style="margin:20px;" onclick="showh()">High</button><br>
+    </div>
+    <div id="footer" align="center">
+        <h3>@Copy Rights By Raghava</h3>
+        <marquee direction="right"><h5>for any queries visit:www.verzeo.com</h5></marquee>
+    </div>
+</body>
+<script>
+    var txt,txt1,txt2,key;
+    var data="",data1="",data2="";
+    function low(){
+         key=document.getElementById("two2");
+    }
+    function medium(){
+        key=document.getElementById("three3");
+    }
+    function high(){
+        key=document.getElementById("four4");
+    }
+    function save(){
+        if(key.value=="Low"){
+            txt=document.getElementById("one1").value;
+            data=data+txt+"<br>";
+            document.getElementById("seven7").innerHTML += '<div style="border-radius:20px;" class="col-sm bg-success">'+txt+" - "+key.value+"(Priority)"+"</div>";
+        }
+        if(key.value=="Medium"){
+            txt1=document.getElementById("one1").value;
+            data1=data1+txt1+"<br>";
+            document.getElementById("seven7").innerHTML += '<div style="border-radius:20px;" class="col-sm bg-warning">'+txt1+" - "+key.value+"(Priority)"+"</div>";
+        }
+        if(key.value=="High"){
+            txt2=document.getElementById("one1").value;
+            data2=data2+txt2+"<br>";
+            document.getElementById("seven7").innerHTML += '<div style="border-radius:20px;" class="col-sm bg-danger">'+txt2+" - "+key.value+"(Priority)"+"</div>";
+        }
+    }
+    function showl(){
+        document.getElementById("seven7").innerHTML = "";
+        document.getElementById("seven7").innerHTML ="The Low Priority Task/Tasks is/are:"+"<br>"+ data;
+        document.getElementById("seven7").style.backgroundColor = "rgb(5,136,81)";
+        document.getElementById("seven7").style.borderRadius = "20px";
+    }
+    function showm(){
+        document.getElementById("seven7").innerHTML = "";
+        document.getElementById("seven7").innerHTML ="The Medium Priority Task/Tasks is/are:"+"<br>"+ data1;
+        document.getElementById("seven7").style.backgroundColor = "rgb(255,191,0)";
+        document.getElementById("seven7").style.borderRadius = "20px";
+    }
+    function showh(){
+        document.getElementById("seven7").innerHTML = "";
+        document.getElementById("seven7").innerHTML ="The High Priority Task/Tasks is/are:"+"<br>"+ data2;
+        document.getElementById("seven7").style.backgroundColor = "rgb(218, 62, 75)";
+        document.getElementById("seven7").style.borderRadius = "20px";
+    }
+</script>
+</html>

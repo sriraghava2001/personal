@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>LOGIN</title>
+        <style>
+            #one:hover{
+                background-color: greenyellow;
+            }
+            #two:hover{
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div align="center">
+            <br>
+            <b>LOGIN</b><br><br><br><br>
+        </div>
+        <div align="center">
+            <u>Email</u>: &nbsp; &nbsp; &nbsp; &nbsp;<input id="one" type="email" placeholder="Enter an email here"><br><br>
+            <u>Password</u>: &nbsp;<input id="two" type="password" placeholder="enter a password here"><br><br>
+            <input id="three" type="button" value="Login" onclick="myfunc()">
+        </div>
+        <script>
+            function myfunc(){
+                if(document.getElementById("one").value.length==0 && document.getElementById("two").value.length==0){
+                    alert("email & password is compulsory");
+                }
+                else if(document.getElementById("one").value.length==0){
+                    alert("email is required");
+                }
+                else if(document.getElementById("two").value.length==0){
+                    alert("password is required");
+                }
+                else{
+                    alert("Login successful")
+                }
+            }
+        </script>
+    </body>
+</html>
