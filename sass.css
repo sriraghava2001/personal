@@ -1,0 +1,20 @@
+.e {
+  font-size: 60px;
+}
+
+.e .a {
+  color: blue;
+}
+
+.e .a .b {
+  color: chartreuse;
+}
+
+.e .c {
+  color: blueviolet;
+}
+
+.e .d {
+  color: red;
+}
+/*# sourceMappingURL=sass.css.map */
